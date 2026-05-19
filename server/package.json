@@ -14,10 +14,12 @@
   "packageManager": "pnpm@10.6.5",
   "dependencies": {
     "@anthropic-ai/sdk": "^0.97.0",
+    "@google/generative-ai": "^0.24.1",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "express-async-handler": "^1.2.0"
+    "express-async-handler": "^1.2.0",
+    "groq-sdk": "^1.2.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",

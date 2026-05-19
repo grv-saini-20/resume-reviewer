@@ -1,10 +1,11 @@
 import  express  from "express";
 import cors from "cors";
 import dotenv from 'dotenv';
+import path from 'path';
 import reviewRouter from "./routes/reviewRouter";
 import { errorHandler, notFound } from "./middlewares/errorMiddleware";
 
-dotenv.config();
+dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 const PORT = 3001;
 const app = express();
