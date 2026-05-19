@@ -1,6 +1,8 @@
 import  express  from "express";
 import cors from "cors";
 import dotenv from 'dotenv';
+import reviewRouter from "./routes/reviewRouter";
+import { errorHandler, notFound } from "./middlewares/errorMiddleware";
 
 dotenv.config();
 
@@ -11,9 +13,10 @@ app.use(cors({origin: "http://localhost:5173"}));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-app.get('/health', (req, res) => {
-  res.json({ status: 'ok' });
-});
+app.use("/api/review", reviewRouter);
+
+app.use(notFound);
+app.use(errorHandler);
 
 app.listen(PORT, () => {
     console.log(`app is running on PORT ${PORT}`);

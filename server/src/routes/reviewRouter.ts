@@ -3,4 +3,6 @@ import reviewResume from "../controllers/reviewController";
 
 const router = express.Router();
 
-router.post("/review", reviewResume);
+router.post("/", reviewResume);
+
+export default router;

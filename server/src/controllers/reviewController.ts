@@ -59,6 +59,6 @@ const reviewResume = asyncHandler(async(req, res) => {
     // For now, send a small SSE message to indicate the stream started and close the connection.
     res.write('data: [DONE]\n\n');
     res.end();
-})
+});
 
 export default reviewResume;
